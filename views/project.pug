@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+    ul
+        for branch in project
+            li= branch.name 
+                a(class="deploy", href=`deployment/${branch.name}`) Deploy
+
+
+    
