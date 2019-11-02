@@ -4,4 +4,4 @@ block content
     ul
     for project in projects 
             li
-                a(href=`project/${project.id}`)= project.name
+                a(href=`project/${project.path}/${project.id}`)= project.name

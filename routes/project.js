@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 
 /* GET home page. */
-router.get("/:id", async function(req, res) {
+router.get("/:projectName/:id", async function(req, res) {
   const project = await getProject(req.params.id);
   res.render("project", { project: project, deploy: deployService });
 });

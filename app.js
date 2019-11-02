@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", projectsRouter);
 app.use("/login", loginRouter);
-app.use("/project/deployment", deployRouter);
+app.use("/project/:projectName/deployment", deployRouter);
 app.use("/project", projectRouter);
 
 // catch 404 and forward to error handler
